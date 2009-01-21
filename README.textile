@@ -36,7 +36,7 @@ Calling title on the model returns the appropriate column depending on which loc
 If you want to set or return the default language attribute while in a different locale, you can call it the way you would call any other. Assuming the default is "en", you would run:
 
   b.title_en # Slaughterhouse Five
-  b.title_en = "Something Else" # Book id: nil, title: "Something Else", title_fr: "Abattoir Cinq", title_de: "Etwas Anderes">
+  b.title_en = "Something Else" # Book id: nil, title: "Something Else", title_fr: "Abattoir Cinq", title_de: "Etwas Anderes"
 
 
   
