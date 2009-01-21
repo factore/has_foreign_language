@@ -51,7 +51,7 @@ Validations are easy.  Just run the validation on the default field name and it 
   end
 
   I18n.locale = "de"
-  b = Book.new(:title => "Etwas Anderes") # Book id: nil, title: nil, title_fr: nil, title_de: "Schlachthof Fünf"
+  b = Book.new(:title => "Etwas Anderes") # Book id: nil, title: nil, title_fr: nil, title_de: "Etwas Anderes"
   b.valid? # true
   
   I18n.locale = "en"
