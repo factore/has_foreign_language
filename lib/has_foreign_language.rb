@@ -42,3 +42,8 @@ module Factore
     end
   end
 end
+
+require 'form_fix'
+if defined?(ActiveRecord::Base)
+  ActiveRecord::Base.send(:include, Factore::HasForeignLanguage)
+end
