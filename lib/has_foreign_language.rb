@@ -4,15 +4,15 @@ module Factore
     def self.included(mod)
       mod.extend(ClassMethods)
     end
-  
+
     module ClassMethods
-    
+
       def has_foreign_language(*args)
         args.each do |field|
           # Define the Getter
           define_method(field.to_s) do
             if I18n.locale != I18n.default_locale && self.class.columns.select {|c| c.name == "#{field}_#{I18n.locale}"}.length > 0
-              result=self.send("#{field}_#{I18n.locale}".to_sym)
+              result = self.send("#{field}_#{I18n.locale}".to_sym)
               result.blank? ? super : self.send("#{field}_#{I18n.locale}".to_sym) #falling back to default if requested locale is nil
             else
               super
@@ -41,4 +41,4 @@ module Factore
       end
     end
   end
-end 
+end
