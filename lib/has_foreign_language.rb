@@ -13,9 +13,9 @@ module Factore
           define_method(field.to_s) do
             if I18n.locale != I18n.default_locale && self.class.columns.select {|c| c.name == "#{field}_#{I18n.locale}"}.length > 0
               result = self.send("#{field}_#{I18n.locale}".to_sym)
-              result.blank? ? super : self.send("#{field}_#{I18n.locale}".to_sym) #falling back to default if requested locale is nil
+              result.blank? ? super() : self.send("#{field}_#{I18n.locale}".to_sym) #falling back to default if requested locale is nil
             else
-              super
+              super()
             end
           end
 
