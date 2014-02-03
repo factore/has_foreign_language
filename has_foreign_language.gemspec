@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
  s.name        = "has_foreign_language"
- s.version     = '0.0.2'
+ s.version     = '0.0.3'
  s.authors     = ["Sean Roberts"]
  s.email       = ["sean@factore.ca"]
 
